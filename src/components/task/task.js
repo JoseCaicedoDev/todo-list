@@ -1,4 +1,3 @@
-import React from 'react';
 import './_task.scss';
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 
