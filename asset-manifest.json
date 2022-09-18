@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/cardReact/static/css/main.125faf4f.css",
-    "main.js": "/cardReact/static/js/main.2ee72281.js",
-    "index.html": "/cardReact/index.html",
-    "main.125faf4f.css.map": "/cardReact/static/css/main.125faf4f.css.map",
-    "main.2ee72281.js.map": "/cardReact/static/js/main.2ee72281.js.map"
+    "main.css": "/todo-list/static/css/main.125faf4f.css",
+    "main.js": "/todo-list/static/js/main.2ee72281.js",
+    "index.html": "/todo-list/index.html",
+    "main.125faf4f.css.map": "/todo-list/static/css/main.125faf4f.css.map",
+    "main.2ee72281.js.map": "/todo-list/static/js/main.2ee72281.js.map"
   },
   "entrypoints": [
     "static/css/main.125faf4f.css",
