@@ -1,8 +1,6 @@
 @import '../../styles/global';
 .task-form{
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   margin: 3rem 0;
   width: 100%;
@@ -19,7 +17,7 @@
     outline: none;
     height: 4rem;
     box-sizing: border-box;
-    width: 80%;
+    width: 65%;
   }
   & > button{
     font-weight: 600;
@@ -37,5 +35,10 @@
     height: 4rem;
     box-sizing: border-box;
     cursor: pointer;
+  }
+}
+@media (min-width: 550px) {
+  .task-form > input{
+    width: 80%;
   }
 }
