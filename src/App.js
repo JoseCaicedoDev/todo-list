@@ -4,18 +4,27 @@ import {useState} from 'react'
 
 function App() {
 
-  const [tasks, setTasks] = useState([])
+  // Estableciendo estado inicial de las tareas dentro del localStorage, en donde
+  // se parse el string guardo, en caso de no tener nada es un arreglo vacio
+  const tareas = JSON.parse(localStorage.getItem('Tareas') || '[]')
+  const [tasks, setTasks] = useState(tareas)
 
   const addTask = task =>{
     if(task.text.trim()){
       task.text = task.text.trim()
-      const updatedTask = [task, ...tasks]
-      setTasks(updatedTask)
+      const tareas = JSON.parse(localStorage.getItem('Tareas') || '[]')
+      tareas.push(task)
+      //guardar en el localStorage en formato string
+      localStorage.setItem('Tareas', JSON.stringify(tareas))
+      //actualizacion del estado de las tareas en la aplicacion
+      setTasks(tareas)
+
     }
   }
 
   const deleteTask = id =>{
     const updatedTask = tasks.filter( task => task.id !== id)
+    localStorage.setItem('Tareas', JSON.stringify(updatedTask))
     setTasks(updatedTask)
   }
 
@@ -26,6 +35,7 @@ function App() {
       }
       return task
     })
+    localStorage.setItem('Tareas', JSON.stringify(updatedTask))
     setTasks(updatedTask)
   }
 
